@@ -1,0 +1,236 @@
+/* start reset css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end reset css */
+
+/* start fonts */
+/* caveat-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/caveat-v17-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/caveat-v17-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* caveat-700 - latin_cyrillic */
+  @font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/caveat-v17-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/caveat-v17-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* end fonts */
+ 
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+    min-height: 100%;
+  }
+  *, ::after, ::before {
+    box-sizing: inherit;
+  }
+  body {
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    color: black;
+    background: content-box radial-gradient(#0792e6, #0b1d37e6);
+  }
+  .container {
+    margin: 0 auto;
+    padding: 0 25px;
+  }
+
+/* start loginscreen */
+.loginscreen{
+  width: 400px;
+  height: 300px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  border: dotted rgb(38, 3, 3) 8px;
+  outline: solid 2px rgb(38, 3, 3);
+  outline-offset: 22px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding: 30px 0 0;
+  border-top: solid 2px  rgb(38, 3, 3);
+  margin: 5px 30px;
+}
+.main-tittle {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  padding-top: 15px;
+}
+.input {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  height: 34px;
+  width: 75%;
+  background-color: bisque;
+}
+.input::placeholder,
+.button-login {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  background-color: bisque;
+}
+.button-login {
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #cac604;
+  font-weight: 700;
+  font-size: 25px;
+}
+/* end loginscreen */
+
+/* start lists */
+@keyframes color-change {
+  0% {
+    color: #0792e6;
+    }
+  50% {
+    color: white;
+    }
+  100% {
+    color: #0792e6;
+    }
+}
+.tittle {
+  font-size: 48px;
+  padding-left: 30px;
+  margin-top: 10px;
+  color: aliceblue;
+  font-weight: bolder;
+}
+.change-color {
+  animation: color-change 5s infinite;
+}
+.logo {
+  margin-bottom: 10px;
+}
+.nav {
+  font-size: 24px;
+  margin-bottom: 30px;
+  background-color: aliceblue;
+  box-shadow: 0px 20px 20px #d4e3e68f;
+}
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 40px;
+}
+.nav-list:last-child {
+  padding-right: 40px;
+}
+.nav-link {
+  text-decoration: none;
+  color: black;
+  padding: 0 10px;
+}
+.nav-link:hover {
+  background-color: #0792e6;
+}
+.list {
+  position: absolute;
+  display: none;
+  width: 100px;
+  background-color: aliceblue;
+  box-shadow: 0 0 10px #0568a6;
+}
+.nav-item:hover .list{
+  display: block;
+}
+.list-link {
+  display: block;
+  text-decoration: none;
+  z-index: 3;
+  color: black;
+  padding-left: 5px;
+}
+.list-link:hover {
+  background-color: #0792e6;
+}
+.section-tittle {
+  font-size: 24px;
+  margin: 0px 0px 10px;
+}
+select {
+  width: 120px;
+  border-radius: 5px;
+  font-family: 'Caveat';
+  font-weight: 700;
+  font-size: 16px;
+  background: aliceblue;
+  border: 2px solid;
+}
+option {
+  text-align: center;
+}
+.button {
+  font-family: 'Caveat';
+  font-style: normal;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
